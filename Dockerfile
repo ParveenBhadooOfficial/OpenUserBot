@@ -75,7 +75,7 @@ RUN python3 -m ensurepip \
 # Clone repo and prepare working directory
 #
 
-RUN git clone -b sql-extended https://github.com/mkaraniya/OpenUserBot /root/userbot
+RUN git clone -b sql-extended https://github.com/ParveenBhadooOfficial/OpenUserBot /root/userbot
 RUN mkdir /root/userbot/.bin
 WORKDIR /root/userbot/
 ENV PATH="/root/userbot/.bin:$PATH"
@@ -90,5 +90,3 @@ COPY ./sample_config.env ./userbot.session* ./config.env* /root/userbot/
 #
 RUN pip3 install -r requirements.txt
 CMD ["python3","-m","userbot"]
-
-
